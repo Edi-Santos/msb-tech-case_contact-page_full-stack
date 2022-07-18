@@ -1,0 +1,9 @@
+{
+  "extends": "trybe-backend",
+  "globals": {
+    "db": "writable"
+  },
+  "rules": {
+    "sonnarjs/no-duplicate-string": ["error", 5]
+  }
+}
