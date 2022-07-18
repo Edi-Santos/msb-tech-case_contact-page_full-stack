@@ -1,0 +1,22 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Edimar dos Santos Resende",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongodb": "^4.8.0"
+  },
+  "devDependencies": {
+    "eslint-config-trybe-backend": "^1.0.4",
+    "joi": "^17.6.0",
+    "nodemon": "^2.0.19"
+  }
+}
