@@ -6,6 +6,12 @@ const addingContact = async (req, res) => {
 
     const addContact = await Contact.addingContact(bodyDatas);
 
+    if (addContact.status) {
+      const { status, message } = addContact;
+
+      return res.status(status).json({ message });
+    }
+
     return res.status(201).json({ message: addContact });
   } catch (error) {
     console.log(`Erro no Controller || ${error}`);
