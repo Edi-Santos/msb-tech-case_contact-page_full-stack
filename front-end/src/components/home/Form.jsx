@@ -11,6 +11,7 @@ function Form() {
     const { name, value } = target;
 
     setInputs(() => ({
+      ...inputs,
       [name]: value,
     }));
   };
