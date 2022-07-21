@@ -2,7 +2,7 @@ const IPIFY_URL = 'https://api.ipify.org?format=json';
 
 function getIp() {
   return fetch(IPIFY_URL)
-    .then((res1) => res1.json());
+    .then((response) => response.json());
 }
 
 module.exports = getIp;
