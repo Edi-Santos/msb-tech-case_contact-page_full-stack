@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ButtonSend from './ButtonSend';
 import InputCellPhone from './InputCellPhone';
 import InputEmail from './InputEmail';
 import InputMessage from './InputMessage';
@@ -21,6 +22,10 @@ function Form() {
     }));
   };
 
+  const onClick = () => {
+    console.log('Só de teste');
+  };
+
   const { name, email, cellphone, message } = inputs;
 
   return (
@@ -32,6 +37,7 @@ function Form() {
         <InputCellPhone cellphone={ cellphone } onChange={ onChange } />
         <InputMessage message={ message } onChange={ onChange } />
       </form>
+      <ButtonSend sendOnClick={ onClick } />
     </main>
   );
 }
