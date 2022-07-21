@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import InputCellPhone from './InputCellPhone';
 import InputEmail from './InputEmail';
 import InputName from './InputName';
 
 function Form() {
   const [inputs, setInputs] = useState({
-    name: '', email: '',
+    name: '',
+    email: '',
+    cellphone: '',
   });
 
   const onChange = ({ target }) => {
@@ -16,7 +19,7 @@ function Form() {
     }));
   };
 
-  const { name, email } = inputs;
+  const { name, email, cellphone } = inputs;
 
   return (
     <main>
@@ -24,6 +27,7 @@ function Form() {
       <form>
         <InputName name={ name } onChange={ onChange } />
         <InputEmail email={ email } onChange={ onChange } />
+        <InputCellPhone cellphone={ cellphone } onChange={ onChange } />
       </form>
     </main>
   );
