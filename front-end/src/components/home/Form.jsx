@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+
 import ButtonSend from './ButtonSend';
 import InputCellPhone from './InputCellPhone';
 import InputEmail from './InputEmail';
 import InputMessage from './InputMessage';
 import InputName from './InputName';
+
+import getIp from '../../services/getIpClient';
 
 function Form() {
   const [inputs, setInputs] = useState({
@@ -11,6 +14,7 @@ function Form() {
     email: '',
     cellphone: '',
     message: '',
+    ip: '',
   });
 
   const onChange = ({ target }) => {
@@ -22,8 +26,13 @@ function Form() {
     }));
   };
 
-  const onClick = () => {
-    console.log('Só de teste');
+  const onClick = async () => {
+    const catchedIp = await getIp();
+
+    setInputs(() => ({
+      ...inputs,
+      ip: catchedIp.ip,
+    }));
   };
 
   const { name, email, cellphone, message } = inputs;
