@@ -14,10 +14,10 @@ function Home() {
   });
 
   return (
-    <main>
+    <section>
       { isLoading && <Loading /> }
       { !isLoading && <h1>Home</h1> }
-    </main>
+    </section>
   );
 }
 
