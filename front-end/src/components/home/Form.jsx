@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import InputEmail from './InputEmail';
 import InputName from './InputName';
 
 function Form() {
   const [inputs, setInputs] = useState({
-    name: '',
+    name: '', email: '',
   });
 
   const onChange = ({ target }) => {
@@ -14,13 +15,14 @@ function Form() {
     }));
   };
 
-  const { name } = inputs;
+  const { name, email } = inputs;
 
   return (
     <main>
       <h2>Entre em contato enviando um email através do formulário</h2>
       <form>
         <InputName name={ name } onChange={ onChange } />
+        <InputEmail email={ email } onChange={ onChange } />
       </form>
     </main>
   );
