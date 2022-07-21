@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import Loading from '../loading/Loading';
+import Form from '../../components/home/Form';
 
 function Home() {
   const [isLoading, setIsLoadding] = useState(true);
@@ -16,7 +17,7 @@ function Home() {
   return (
     <section>
       { isLoading && <Loading /> }
-      { !isLoading && <h1>Home</h1> }
+      { !isLoading && <Form /> }
     </section>
   );
 }
