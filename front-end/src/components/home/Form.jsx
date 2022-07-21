@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import InputCellPhone from './InputCellPhone';
 import InputEmail from './InputEmail';
+import InputMessage from './InputMessage';
 import InputName from './InputName';
 
 function Form() {
@@ -8,6 +9,7 @@ function Form() {
     name: '',
     email: '',
     cellphone: '',
+    message: '',
   });
 
   const onChange = ({ target }) => {
@@ -19,7 +21,7 @@ function Form() {
     }));
   };
 
-  const { name, email, cellphone } = inputs;
+  const { name, email, cellphone, message } = inputs;
 
   return (
     <main>
@@ -28,6 +30,7 @@ function Form() {
         <InputName name={ name } onChange={ onChange } />
         <InputEmail email={ email } onChange={ onChange } />
         <InputCellPhone cellphone={ cellphone } onChange={ onChange } />
+        <InputMessage message={ message } onChange={ onChange } />
       </form>
     </main>
   );
