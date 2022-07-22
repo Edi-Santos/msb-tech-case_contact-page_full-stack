@@ -11,4 +11,5 @@ module.exports = Joi.object({
   email: Joi.string().email().required(),
   cellphone: Joi.string().regex(cellPhoneRegExp),
   message: Joi.string().required(),
+  ip: Joi.string().required(),
 });
