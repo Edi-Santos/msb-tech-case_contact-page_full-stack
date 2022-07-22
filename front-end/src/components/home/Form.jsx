@@ -7,6 +7,7 @@ import InputMessage from './InputMessage';
 import InputName from './InputName';
 
 import getIp from '../../services/getIpClient';
+import contactRequest from '../../services/contactAPI';
 
 function Form() {
   const [inputs, setInputs] = useState({
@@ -33,6 +34,19 @@ function Form() {
       ...inputs,
       ip: catchedIp.ip,
     }));
+
+    const localUrl = 'http://localhost:3001/contact';
+    const method = 'POST';
+    const headers = {
+      'Content-type': 'application/json',
+    };
+    const body = { ...inputs };
+
+    const sendToBD = await contactRequest(
+      localUrl, method, headers, JSON.stringify(body),
+    );
+
+    alert(sendToBD.message);
   };
 
   const { name, email, cellphone, message } = inputs;
