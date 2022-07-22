@@ -120,6 +120,7 @@ Este _endpoint_ é responsável por salvar um registro de contato enviado pelo u
 "email":      String | Campo Obrigatório,
 "cellphone":  String | Campo Obrigatório,
 "message":    String | Campo Obrigatório,
+"ip":         String | Campo Obrigatório,
 ```
 - _Outputs_: este _endpoint_ retorna um objeto contendo o a chave "__message__" com o valor: __Contato enviado com sucesso__;
 - _Status_: retorna o status __201__.
